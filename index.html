@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cúspide Fisioterapia · Ermua</title>
+<meta name="description" content="Fisioterapia en Ermua: recuperación funcional, clínica del corredor, hipopresivos, reeducación postural y PNI clínica. Pide tu cita por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Roboto+Condensed:wght@300;400;500;700&family=Archivo+Black&display=swap" rel="stylesheet">
+<style>
+:root{
+  --morado:#5B2A8C; --morado-osc:#3D1A63; --morado-claro:#7B4BB0;
+  --oro:#E3A33B; --oro-osc:#C9861F;
+  --lavanda:#F5F0FB; --lavanda-2:#ECE3F7;
+  --texto:#2B2036; --suave:#6D6378; --blanco:#fff;
+  --linea:#E6DDF0; --verde:#1FA855;
+  --radio:18px; --sombra:0 10px 30px rgba(61,26,99,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Roboto Condensed",system-ui,sans-serif;color:var(--texto);background:var(--blanco);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:0}
+a{color:inherit;text-decoration:none}
+img,svg{display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.script{font-family:"Yellowtail",cursive;font-weight:400}
+section{padding:80px 0;scroll-margin-top:70px}
+.eyebrow{display:inline-block;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--oro-osc);margin-bottom:10px}
+h2{font-size:clamp(30px,4.5vw,44px);line-height:1.1;color:var(--morado);font-weight:700;margin-bottom:14px}
+h2 .script{color:var(--oro);font-size:1.25em;font-weight:400}
+.lead{color:var(--suave);font-size:18px;max-width:620px}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:700;font-size:17px;border:2px solid transparent;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s;font-family:inherit;line-height:1}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-wa{background:var(--verde);color:#fff;box-shadow:0 8px 20px rgba(31,168,85,.28)}
+.btn-morado{background:var(--morado);color:#fff;box-shadow:0 8px 20px rgba(91,42,140,.25)}
+.btn-borde{border-color:var(--morado);color:var(--morado);background:#fff}
+.btn-oro{background:var(--oro);color:var(--morado-osc)}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:8px}
+.logo svg{width:52px;height:40px}
+.logo-txt{display:flex;flex-direction:column;line-height:.8}
+.logo-txt .script{color:var(--oro);font-size:32px}
+.logo-txt small{color:var(--morado);font-size:14px;letter-spacing:.02em;padding-left:22px;margin-top:2px}
+.menu{display:flex;gap:26px;align-items:center;font-weight:500;color:var(--morado)}
+.menu a:not(.btn):hover{color:var(--oro-osc)}
+.menu .btn{padding:11px 20px;font-size:15px}
+@media(max-width:820px){.menu a:not(.btn){display:none}}
+
+/* Hero */
+.hero{padding:56px 0 0;background:
+  radial-gradient(900px 400px at 85% 0%,var(--lavanda-2),transparent 70%),
+  radial-gradient(500px 300px at 0% 100%,#FFF4E3,transparent 70%),#fff;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.estado{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--linea);padding:7px 14px;border-radius:999px;font-size:15px;font-weight:500;box-shadow:var(--sombra)}
+.punto{width:9px;height:9px;border-radius:50%;background:#C9C1D3}
+.estado.abierto .punto{background:var(--verde);box-shadow:0 0 0 4px rgba(31,168,85,.18)}
+.estado.cerrado .punto{background:#E0596B}
+.hero h1{margin:22px 0 6px;line-height:.9}
+.hero h1 .script{display:block;color:var(--oro);font-size:clamp(76px,12vw,128px);margin-left:-4px}
+.hero h1 .sub{display:block;color:var(--morado);font-size:clamp(26px,3.6vw,38px);font-weight:300;letter-spacing:.01em;margin-top:4px}
+.firma{color:var(--oro-osc);font-weight:500;font-size:18px;margin:14px 0 18px}
+.firma b{color:var(--morado);font-weight:700}
+.hero p.lead{margin-bottom:28px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.sellos{display:flex;flex-wrap:wrap;gap:10px 22px;color:var(--suave);font-size:15px}
+.sellos span{display:inline-flex;align-items:center;gap:7px}
+.sellos svg{width:18px;height:18px;color:var(--morado)}
+.estrellas{color:var(--oro)!important;letter-spacing:1px}
+
+.tarjeta-hero{position:relative;background:#fff;border-radius:24px;box-shadow:0 30px 60px rgba(61,26,99,.16);padding:30px 28px 0;border:1px solid var(--linea);overflow:hidden;transform:rotate(1.5deg)}
+.tarjeta-hero .marca{display:flex;align-items:flex-start;gap:6px;margin-bottom:18px}
+.tarjeta-hero .marca svg{width:84px;height:66px}
+.tarjeta-hero .marca .script{color:var(--oro);font-size:54px;line-height:.85}
+.tarjeta-hero .marca small{display:block;color:var(--morado);font-size:20px;padding-left:40px}
+.tarjeta-hero ul{list-style:none;color:var(--morado);font-size:19px;line-height:1.5;padding-left:8px;margin-bottom:24px}
+.tarjeta-hero li::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--oro);margin-right:10px;vertical-align:middle}
+.banda{background:var(--morado);color:var(--oro);font-family:"Archivo Black",sans-serif;letter-spacing:.06em;text-align:center;padding:12px 10px;font-size:19px;margin:0 -28px}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.tarjeta-hero{transform:none;max-width:460px}}
+
+.banda-larga{margin-top:60px;background:var(--morado);color:var(--oro);overflow:hidden}
+.banda-larga .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:18px;padding-bottom:18px;flex-wrap:wrap}
+.banda-larga strong{font-family:"Archivo Black",sans-serif;font-size:clamp(18px,2.6vw,26px);letter-spacing:.05em;font-weight:400}
+.banda-larga span{color:#fff;opacity:.85}
+
+/* Servicios */
+.servicios-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:38px}
+.serv{background:#fff;border:1px solid var(--linea);border-radius:var(--radio);padding:26px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s,border-color .2s}
+.serv:hover{transform:translateY(-4px);box-shadow:var(--sombra);border-color:var(--lavanda-2)}
+.icono{width:54px;height:54px;border-radius:16px;background:var(--lavanda);display:grid;place-items:center;margin-bottom:16px;color:var(--morado)}
+.icono svg{width:28px;height:28px}
+.serv h3{color:var(--morado);font-size:22px;line-height:1.15;margin-bottom:8px}
+.serv p{color:var(--suave);font-size:16px;flex:1}
+.serv button{margin-top:18px;align-self:flex-start;background:none;border:0;font:inherit;font-weight:700;color:var(--oro-osc);cursor:pointer;display:inline-flex;gap:6px;align-items:center;padding:0}
+.serv button:hover{color:var(--morado)}
+.serv.destacado{background:linear-gradient(160deg,var(--morado),var(--morado-osc));color:#fff;border:0}
+.serv.destacado h3{color:#fff}.serv.destacado p{color:#E5DAF3}
+.serv.destacado .icono{background:rgba(255,255,255,.12);color:var(--oro)}
+.serv.destacado button{color:var(--oro)}
+.etiqueta{display:inline-block;background:var(--oro);color:var(--morado-osc);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:10px;align-self:flex-start}
+
+/* Cita */
+#cita{background:var(--lavanda)}
+.cita-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.pasos{list-style:none;margin:30px 0;display:grid;gap:18px}
+.pasos li{display:flex;gap:16px;align-items:flex-start}
+.num{flex:none;width:40px;height:40px;border-radius:50%;background:var(--morado);color:var(--oro);font-family:"Archivo Black";display:grid;place-items:center;font-size:17px}
+.pasos b{display:block;color:var(--morado);font-size:19px}
+.pasos span{color:var(--suave)}
+.otras{display:flex;gap:12px;flex-wrap:wrap}
+form{background:#fff;border-radius:24px;padding:30px;box-shadow:var(--sombra);border:1px solid var(--linea)}
+form h3{color:var(--morado);font-size:24px;margin-bottom:4px}
+form > p{color:var(--suave);font-size:15px;margin-bottom:22px}
+.campo{margin-bottom:16px}
+.fila{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-weight:700;color:var(--morado);font-size:15px;margin-bottom:6px}
+label small{font-weight:400;color:var(--suave)}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1.5px solid var(--linea);border-radius:12px;background:#FCFAFE;color:var(--texto);transition:border-color .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--morado-claro);box-shadow:0 0 0 4px rgba(91,42,140,.12);background:#fff}
+textarea{resize:vertical;min-height:84px}
+.chips{display:flex;gap:10px;flex-wrap:wrap}
+.chip{flex:1;min-width:130px}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:block;text-align:center;padding:12px;border:1.5px solid var(--linea);border-radius:12px;cursor:pointer;font-weight:500;background:#FCFAFE;transition:.15s}
+.chip span small{display:block;color:var(--suave);font-size:13px;font-weight:400}
+.chip input:checked + span{border-color:var(--morado);background:var(--lavanda);color:var(--morado);box-shadow:0 0 0 3px rgba(91,42,140,.10)}
+.aviso{display:none;margin-top:8px;font-size:14px;color:#B33A4C;background:#FDECEF;padding:8px 12px;border-radius:10px}
+.aviso.si{display:block}
+form .btn{width:100%;margin-top:6px;padding:17px}
+.legal{font-size:13px;color:var(--suave);text-align:center;margin-top:12px}
+@media(max-width:900px){.cita-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.fila{grid-template-columns:1fr}form{padding:22px}}
+
+/* Horario + ubicación */
+.info-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;margin-top:38px}
+.caja{background:#fff;border:1px solid var(--linea);border-radius:var(--radio);padding:26px}
+.caja h3{color:var(--morado);font-size:22px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.caja h3 svg{width:22px;height:22px;color:var(--oro-osc)}
+table{width:100%;border-collapse:collapse}
+td{padding:11px 10px;border-bottom:1px solid var(--linea);font-size:16px}
+td:last-child{text-align:right;color:var(--suave)}
+tr:last-child td{border-bottom:0}
+tr.hoy td{background:var(--lavanda);color:var(--morado);font-weight:700}
+tr.hoy td:first-child{border-radius:10px 0 0 10px}
+tr.hoy td:last-child{border-radius:0 10px 10px 0;color:var(--morado)}
+.hoy-tag{font-size:11px;background:var(--oro);color:var(--morado-osc);padding:2px 8px;border-radius:999px;margin-left:8px;letter-spacing:.06em;text-transform:uppercase}
+.cerrado-txt{color:#B9AFC4!important}
+.mapa{border-radius:14px;overflow:hidden;border:1px solid var(--linea);height:250px;margin:14px 0 18px;background:var(--lavanda)}
+.mapa iframe{width:100%;height:100%;border:0}
+.dir{font-size:18px;color:var(--texto);font-weight:500}
+.dir small{display:block;color:var(--suave);font-weight:400}
+.extras{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.extras span{background:var(--lavanda);color:var(--morado);font-size:14px;padding:6px 12px;border-radius:999px;display:inline-flex;gap:6px;align-items:center}
+.extras svg{width:15px;height:15px}
+@media(max-width:860px){.info-grid{grid-template-columns:1fr}}
+
+/* FAQ */
+#faq{background:linear-gradient(#fff,var(--lavanda))}
+.faq{max-width:780px;margin:34px auto 0;display:grid;gap:12px}
+details{background:#fff;border:1px solid var(--linea);border-radius:14px;padding:4px 22px}
+summary{list-style:none;cursor:pointer;padding:16px 0;font-weight:700;color:var(--morado);font-size:18px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;color:var(--oro-osc);font-weight:400;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--suave);padding:0 0 18px}
+
+/* CTA final */
+.final{background:var(--morado);color:#fff;text-align:center;padding:70px 0;position:relative;overflow:hidden}
+.final h2{color:#fff}
+.final h2 .script{color:var(--oro)}
+.final p{color:#E2D5F2;max-width:520px;margin:0 auto 28px}
+.final .ctas{justify-content:center}
+.final .btn-borde{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+
+footer{background:var(--morado-osc);color:#CDBDE2;padding:36px 0 30px;font-size:15px}
+.pie{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+.pie .logo-txt small{color:#fff}
+.demo{margin-top:20px;font-size:13px;opacity:.7;text-align:center}
+
+/* WhatsApp flotante + barra móvil */
+.wa-flot{position:fixed;right:20px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--verde);display:grid;place-items:center;box-shadow:0 10px 26px rgba(31,168,85,.4);transition:transform .2s}
+.wa-flot:hover{transform:scale(1.07)}
+.wa-flot svg{width:32px;height:32px;color:#fff}
+.barra-movil{display:none}
+@media(max-width:700px){
+  body{padding-bottom:74px}
+  .wa-flot{display:none}
+  .barra-movil{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;padding:10px 12px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--linea);box-shadow:0 -6px 20px rgba(61,26,99,.08)}
+  .barra-movil a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:13px;font-weight:700;border-radius:14px;padding:8px 4px;color:var(--morado);background:var(--lavanda)}
+  .barra-movil a svg{width:22px;height:22px}
+  .barra-movil a.wa{background:var(--verde);color:#fff}
+  .barra-movil a.cita{background:var(--morado);color:var(--oro)}
+  section{padding:60px 0}
+}
+</style>
+</head>
+<body>
+
+<!-- Iconos reutilizables -->
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.86 9.86 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.24 8.25c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42h-.48a.92.92 0 0 0-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18M8 15h3"/></g></symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-silla" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="4" r="1.6"/><path d="M11 7v6h5l3 5"/><path d="M8 11a6 6 0 1 0 8.5 6.5"/></g></symbol>
+  <symbol id="i-tarjeta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20M6 15h4"/></g></symbol>
+  <symbol id="i-reloj" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-logo" viewBox="0 0 120 90"><circle cx="66" cy="16" r="13" fill="#E3A33B"/><path d="M47 6 L6 84 Q40 58 92 56 Q58 50 47 6 Z" fill="#5B2A8C"/><path d="M47 6 Q56 44 92 56 Q64 54 50 40 Z" fill="#7B4BB0" opacity=".55"/><path d="M4 88 Q44 60 104 58" fill="none" stroke="#5B2A8C" stroke-width="2.4" stroke-linecap="round"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" class="logo" aria-label="Cúspide Fisioterapia, inicio">
+      <svg><use href="#i-logo"/></svg>
+      <span class="logo-txt"><span class="script">cúspide</span><small>fisioterapia</small></span>
+    </a>
+    <nav class="menu">
+      <a href="#servicios">Servicios</a>
+      <a href="#horario">Horario</a>
+      <a href="#faq">Dudas</a>
+      <a href="#cita" class="btn btn-morado">Pedir cita</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="estado" id="estado"><span class="punto"></span><span id="estado-txt">Comprobando horario…</span></span>
+        <h1><span class="script">cúspide</span><span class="sub">Fisioterapia en Ermua</span></h1>
+        <p class="firma"><b>Sonia López Bañuelos</b> · Fisioterapeuta colegiada nº 1280</p>
+        <p class="lead">Te ayudo a recuperar el movimiento, volver a correr sin dolor y sentirte bien en tu cuerpo. Atención personalizada, sin prisas y uno a uno.</p>
+        <div class="ctas">
+          <a class="btn btn-wa" data-wa="Hola, me gustaría pedir cita en Cúspide Fisioterapia." href="#"><svg><use href="#i-wa"/></svg>Pedir cita por WhatsApp</a>
+          <a class="btn btn-borde" href="tel:+34600000000"><svg><use href="#i-tel"/></svg>625 XXX XXX</a>
+        </div>
+        <div class="sellos">
+          <span><span class="estrellas">★★★★★</span> 5,0 en Google</span>
+          <span><svg><use href="#i-silla"/></svg>Accesible en silla de ruedas</span>
+          <span><svg><use href="#i-tarjeta"/></svg>Tarjeta y pago con móvil</span>
+        </div>
+      </div>
+
+      <div class="tarjeta-hero" aria-hidden="true">
+        <div class="marca">
+          <svg><use href="#i-logo"/></svg>
+          <div><span class="script">cúspide</span><small>fisioterapia</small></div>
+        </div>
+        <ul>
+          <li>Recuperación funcional</li>
+          <li>Especialista en la clínica del corredor</li>
+          <li>Hipopresivos</li>
+          <li>Reeducación postural</li>
+          <li>PNI clínica</li>
+        </ul>
+        <div class="banda">CITA PREVIA · 625 XXX XXX</div>
+      </div>
+    </div>
+
+    <div class="banda-larga">
+      <div class="wrap">
+        <strong>CITA PREVIA · 625 XXX XXX</strong>
+        <span>De la Villa Sexto Centenario Kalea, 11 · Ermua</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="wrap">
+      <span class="eyebrow">Tratamientos</span>
+      <h2>¿En qué te puedo <span class="script">ayudar?</span></h2>
+      <p class="lead">Cada sesión empieza escuchándote y valorando tu caso. Después diseñamos juntos un plan adaptado a ti.</p>
+
+      <div class="servicios-grid">
+        <article class="serv">
+          <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18c2-6 5-9 8-9s4 2 4 4-1 3-3 3"/><path d="M12 9V4M9 6l3-2 3 2"/><path d="M4 21h16"/></svg></div>
+          <h3>Recuperación funcional</h3>
+          <p>Después de una lesión, una operación o un esguince: recupera fuerza, movilidad y confianza paso a paso hasta volver a tu vida normal.</p>
+          <button data-serv="Recuperación funcional">Pedir cita <svg width="16" height="16"><use href="#i-flecha"/></svg></button>
+        </article>
+
+        <article class="serv destacado">
+          <span class="etiqueta">Especialidad</span>
+          <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="4" r="2"/><path d="M8 21l3-6 3 2v5"/><path d="M6 12l3-4 4 1 3 3h3"/><path d="M11 15l-1-5"/></svg></div>
+          <h3>Clínica del corredor</h3>
+          <p>Periostitis, rodilla del corredor, fascitis, sobrecargas… Analizo tu pisada y tu técnica para tratar la lesión y que no vuelva.</p>
+          <button data-serv="Clínica del corredor">Pedir cita <svg width="16" height="16"><use href="#i-flecha"/></svg></button>
+        </article>
+
+        <article class="serv">
+          <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4" r="2"/><path d="M12 7v6M8 21l4-8 4 8M7 10h10"/></svg></div>
+          <h3>Hipopresivos</h3>
+          <p>Gimnasia abdominal hipopresiva para fortalecer el suelo pélvico, reducir la cintura y mejorar la postura. Ideal en el posparto.</p>
+          <button data-serv="Hipopresivos">Pedir cita <svg width="16" height="16"><use href="#i-flecha"/></svg></button>
+        </article>
+
+        <article class="serv">
+          <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18"/><path d="M8 6h8M7 10h10M8 14h8M9 18h6"/></svg></div>
+          <h3>Reeducación postural</h3>
+          <p>Dolor de espalda, cuello o cargas por pasar muchas horas sentado. Trabajamos tu postura de forma global para aliviar y prevenir.</p>
+          <button data-serv="Reeducación postural">Pedir cita <svg width="16" height="16"><use href="#i-flecha"/></svg></button>
+        </article>
+
+        <article class="serv">
+          <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/><path d="M8 12h2l1-2 2 4 1-2h2"/></svg></div>
+          <h3>PNI clínica</h3>
+          <p>Psiconeuroinmunología: un enfoque que tiene en cuenta alimentación, descanso y estrés para tratar el dolor persistente desde la raíz.</p>
+          <button data-serv="PNI clínica">Pedir cita <svg width="16" height="16"><use href="#i-flecha"/></svg></button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITA -->
+  <section id="cita">
+    <div class="wrap cita-grid">
+      <div>
+        <span class="eyebrow">Cita previa</span>
+        <h2>Pide tu cita en <span class="script">1 minuto</span></h2>
+        <p class="lead">Rellena estos datos y se abrirá WhatsApp con el mensaje ya escrito. Solo tienes que pulsar enviar.</p>
+        <ol class="pasos">
+          <li><span class="num">1</span><div><b>Cuéntame qué te pasa</b><span>Elige el tratamiento y el día que te viene mejor.</span></div></li>
+          <li><span class="num">2</span><div><b>Envía el WhatsApp</b><span>El mensaje se escribe solo, sin llamadas ni esperas.</span></div></li>
+          <li><span class="num">3</span><div><b>Te confirmo la hora</b><span>Te respondo lo antes posible con la cita cerrada.</span></div></li>
+        </ol>
+        <div class="otras">
+          <a class="btn btn-borde" href="tel:+34600000000"><svg><use href="#i-tel"/></svg>Prefiero llamar</a>
+        </div>
+      </div>
+
+      <form id="form-cita" novalidate>
+        <h3>Solicitud de cita</h3>
+        <p>Campos con * obligatorios.</p>
+        <div class="fila">
+          <div class="campo">
+            <label for="nombre">Nombre *</label>
+            <input id="nombre" name="nombre" autocomplete="name" placeholder="Tu nombre" required>
+          </div>
+          <div class="campo">
+            <label for="tel">Teléfono *</label>
+            <input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="6XX XXX XXX" required>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="servicio">Tratamiento</label>
+          <select id="servicio" name="servicio">
+            <option>Primera valoración (no lo tengo claro)</option>
+            <option>Recuperación funcional</option>
+            <option>Clínica del corredor</option>
+            <option>Hipopresivos</option>
+            <option>Reeducación postural</option>
+            <option>PNI clínica</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="dia">Día preferido</label>
+          <input id="dia" name="dia" type="date">
+          <div class="aviso" id="aviso-dia">Sábados y domingos la clínica está cerrada. Elige de lunes a viernes.</div>
+        </div>
+        <div class="campo">
+          <label>Franja horaria</label>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="franja" value="Mañana" checked><span>Mañana<small>9:00 – 13:00</small></span></label>
+            <label class="chip"><input type="radio" name="franja" value="Tarde"><span>Tarde<small id="tarde-txt">16:30 – 20:00</small></span></label>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="motivo">¿Qué te pasa? <small>(opcional)</small></label>
+          <textarea id="motivo" name="motivo" placeholder="Ej.: me duele la rodilla al correr desde hace dos semanas"></textarea>
+        </div>
+        <button class="btn btn-wa" type="submit"><svg><use href="#i-wa"/></svg>Enviar por WhatsApp</button>
+        <p class="legal">Tus datos solo se usan para gestionar tu cita.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- HORARIO Y UBICACIÓN -->
+  <section id="horario">
+    <div class="wrap">
+      <span class="eyebrow">Horario y ubicación</span>
+      <h2>Te espero en el <span class="script">centro de Ermua</span></h2>
+      <div class="info-grid">
+        <div class="caja">
+          <h3><svg><use href="#i-reloj"/></svg>Horario</h3>
+          <table id="tabla-horario">
+            <tr data-d="1"><td>Lunes</td><td>9:00–13:00 · 16:30–20:00</td></tr>
+            <tr data-d="2"><td>Martes</td><td>9:00–13:00 · 16:30–20:00</td></tr>
+            <tr data-d="3"><td>Miércoles</td><td>9:00–13:00 · 16:30–20:00</td></tr>
+            <tr data-d="4"><td>Jueves</td><td>9:00–13:00 · 16:30–20:00</td></tr>
+            <tr data-d="5"><td>Viernes</td><td>9:00–13:00 · 16:30–19:00</td></tr>
+            <tr data-d="6"><td>Sábado</td><td class="cerrado-txt">Cerrado</td></tr>
+            <tr data-d="0"><td>Domingo</td><td class="cerrado-txt">Cerrado</td></tr>
+          </table>
+        </div>
+        <div class="caja">
+          <h3><svg><use href="#i-pin"/></svg>Dónde estamos</h3>
+          <p class="dir">De la Villa Sexto Centenario Kalea, 11<small>48260 Ermua, Bizkaia</small></p>
+          <div class="mapa"><iframe loading="lazy" title="Mapa de Cúspide Fisioterapia" src="https://www.google.com/maps?q=De+la+Villa+Sexto+Centenario+Kalea+11,+48260+Ermua,+Bizkaia&output=embed"></iframe></div>
+          <a class="btn btn-morado" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=De+la+Villa+Sexto+Centenario+Kalea+11,+48260+Ermua,+Bizkaia"><svg><use href="#i-pin"/></svg>Cómo llegar</a>
+          <div class="extras">
+            <span><svg><use href="#i-silla"/></svg>Acceso y aseo adaptados</span>
+            <span><svg><use href="#i-tarjeta"/></svg>Tarjeta, débito y NFC</span>
+            <span><svg><use href="#i-cal"/></svg>Solo con cita previa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div style="text-align:center">
+        <span class="eyebrow">Dudas frecuentes</span>
+        <h2>Antes de tu <span class="script">primera visita</span></h2>
+      </div>
+      <div class="faq">
+        <details open><summary>¿Necesito volante del médico?</summary><p>No. Puedes pedir cita directamente. Si tienes informes, pruebas o resonancias, tráelos: me ayudan a valorar mejor tu caso.</p></details>
+        <details><summary>¿Cuánto dura una sesión?</summary><p>Entre 45 y 60 minutos. La primera incluye una valoración completa para entender bien qué te pasa y planificar el tratamiento.</p></details>
+        <details><summary>¿Qué ropa tengo que traer?</summary><p>Ropa cómoda que permita moverte. Si vienes por la clínica del corredor, trae también las zapatillas con las que entrenas.</p></details>
+        <details><summary>¿Cuántas sesiones voy a necesitar?</summary><p>Depende de cada persona y de cada lesión. Tras la primera valoración te explicaré el plan y una estimación realista.</p></details>
+        <details><summary>¿Cómo puedo pagar?</summary><p>Efectivo, tarjeta de crédito o débito, y pago con el móvil (NFC).</p></details>
+        <details><summary>¿Y si no puedo ir a mi cita?</summary><p>Avísame por WhatsApp o por teléfono con al menos 24 horas de antelación y la cambiamos sin problema.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final">
+    <div class="wrap">
+      <h2>Vuelve a moverte <span class="script">sin dolor</span></h2>
+      <p>Escríbeme y buscamos el hueco que mejor te venga. Te respondo lo antes posible.</p>
+      <div class="ctas">
+        <a class="btn btn-wa" data-wa="Hola, me gustaría pedir cita en Cúspide Fisioterapia." href="#"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+        <a class="btn btn-borde" href="tel:+34600000000"><svg><use href="#i-tel"/></svg>625 XXX XXX</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="pie">
+      <a href="#inicio" class="logo"><svg><use href="#i-logo"/></svg><span class="logo-txt"><span class="script">cúspide</span><small>fisioterapia</small></span></a>
+      <div>Sonia López Bañuelos · Colg. 1280<br>De la Villa Sexto Centenario Kalea, 11 · 48260 Ermua</div>
+      <div>Tel. 625 XXX XXX<br>Lun–Vie · Cita previa</div>
+    </div>
+    <p class="demo">Web de demostración · © <span id="anio"></span> Cúspide Fisioterapia</p>
+  </div>
+</footer>
+
+<a class="wa-flot" data-wa="Hola, me gustaría pedir cita en Cúspide Fisioterapia." href="#" aria-label="Escribir por WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<nav class="barra-movil" aria-label="Contacto rápido">
+  <a href="tel:+34600000000"><svg><use href="#i-tel"/></svg>Llamar</a>
+  <a class="wa" data-wa="Hola, me gustaría pedir cita en Cúspide Fisioterapia." href="#"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+  <a class="cita" href="#cita"><svg><use href="#i-cal"/></svg>Pedir cita</a>
+</nav>
+
+<script>
+(function(){
+  var WA = "34600000000";
+  function waLink(t){ return "https://wa.me/" + WA + "?text=" + encodeURIComponent(t); }
+
+  // Enlaces de WhatsApp
+  document.querySelectorAll("[data-wa]").forEach(function(a){
+    a.href = waLink(a.getAttribute("data-wa"));
+    a.target = "_blank"; a.rel = "noopener";
+  });
+
+  // Horario (minutos desde medianoche)
+  var M = [[540,780],[990,1200]], V = [[540,780],[990,1140]];
+  var H = {0:[],1:M,2:M,3:M,4:M,5:V,6:[]};
+  var NOMBRES = ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
+  function fmt(m){ return Math.floor(m/60) + ":" + String(m%60).padStart(2,"0"); }
+
+  function ahoraMadrid(){
+    try{
+      var p = new Intl.DateTimeFormat("en-US",{timeZone:"Europe/Madrid",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false,year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
+      var o = {}; p.forEach(function(x){ o[x.type] = x.value; });
+      var d = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];
+      var h = parseInt(o.hour,10) % 24;
+      return {dia:d, min:h*60 + parseInt(o.minute,10), fecha:o.year + "-" + o.month + "-" + o.day};
+    }catch(e){
+      var n = new Date();
+      return {dia:n.getDay(), min:n.getHours()*60+n.getMinutes(), fecha:n.toISOString().slice(0,10)};
+    }
+  }
+
+  var ahora = ahoraMadrid();
+  var est = document.getElementById("estado"), txt = document.getElementById("estado-txt");
+  var abierto = H[ahora.dia].find(function(r){ return ahora.min >= r[0] && ahora.min < r[1]; });
+  if (abierto){
+    est.classList.add("abierto");
+    txt.textContent = "Abierto ahora · hasta las " + fmt(abierto[1]);
+  } else {
+    est.classList.add("cerrado");
+    var msg = "Cerrado";
+    var hoyProx = H[ahora.dia].find(function(r){ return r[0] > ahora.min; });
+    if (hoyProx){ msg += " · abre hoy a las " + fmt(hoyProx[0]); }
+    else {
+      for (var i=1;i<=7;i++){
+        var d = (ahora.dia + i) % 7;
+        if (H[d].length){ msg += " · abre " + (i===1 ? "mañana" : "el " + NOMBRES[d]) + " a las " + fmt(H[d][0][0]); break; }
+      }
+    }
+    txt.textContent = msg;
+  }
+
+  // Resaltar hoy en la tabla
+  var fila = document.querySelector('#tabla-horario tr[data-d="' + ahora.dia + '"]');
+  if (fila){ fila.classList.add("hoy"); fila.cells[0].insertAdjacentHTML("beforeend",'<span class="hoy-tag">Hoy</span>'); }
+
+  // Formulario
+  var dia = document.getElementById("dia"), aviso = document.getElementById("aviso-dia"), tardeTxt = document.getElementById("tarde-txt");
+  dia.min = ahora.fecha;
+  function revisarDia(){
+    if (!dia.value){ aviso.classList.remove("si"); tardeTxt.textContent = "16:30 – 20:00"; return; }
+    var d = new Date(dia.value + "T12:00:00").getDay();
+    aviso.classList.toggle("si", d === 0 || d === 6);
+    tardeTxt.textContent = d === 5 ? "16:30 – 19:00" : "16:30 – 20:00";
+  }
+  dia.addEventListener("change", revisarDia);
+
+  // Botones "Pedir cita" de cada servicio
+  document.querySelectorAll("[data-serv]").forEach(function(b){
+    b.addEventListener("click", function(){
+      document.getElementById("servicio").value = b.getAttribute("data-serv");
+      document.getElementById("cita").scrollIntoView({behavior:"smooth"});
+      setTimeout(function(){ document.getElementById("nombre").focus({preventScroll:true}); }, 600);
+    });
+  });
+
+  document.getElementById("form-cita").addEventListener("submit", function(e){
+    e.preventDefault();
+    var f = e.target, ok = true;
+    ["nombre","tel"].forEach(function(id){
+      var el = document.getElementById(id), vacio = !el.value.trim();
+      el.style.borderColor = vacio ? "#E0596B" : "";
+      if (vacio && ok){ el.focus(); ok = false; }
+    });
+    if (aviso.classList.contains("si")){ dia.focus(); ok = false; }
+    if (!ok) return;
+
+    var lineas = ["Hola, soy " + f.nombre.value.trim() + ". Me gustaría pedir cita en Cúspide Fisioterapia.", ""];
+    lineas.push("• Tratamiento: " + f.servicio.value);
+    if (dia.value){
+      var fecha = new Date(dia.value + "T12:00:00").toLocaleDateString("es-ES",{weekday:"long",day:"numeric",month:"long"});
+      lineas.push("• Día preferido: " + fecha);
+    }
+    lineas.push("• Franja: " + f.franja.value);
+    if (f.motivo.value.trim()) lineas.push("• Motivo: " + f.motivo.value.trim());
+    lineas.push("• Mi teléfono: " + f.tel.value.trim());
+    window.open(waLink(lineas.join("\n")), "_blank");
+  });
+
+  document.getElementById("anio").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
